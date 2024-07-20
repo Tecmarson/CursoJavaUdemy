@@ -13,7 +13,7 @@ public class ex03 {
         int quantidadeClientesDiesel = 0;
 
 
-        System.out.println("""
+        System.out.print("""
                 Informe o tipo de combustível abastecido:
                 
                 Opções 
@@ -21,18 +21,23 @@ public class ex03 {
                 2. Gasolina
                 3. Diesel
                 4. fim
+                
+                Digite aqui: 
                 """);
 
         int tipoCombustivel = read.nextInt();
 
         while (tipoCombustivel != 4) {
             if (tipoCombustivel == 1) {
+                System.out.println("Digite aqui: ");
                 quantidadeClientesAlcool++;
                 tipoCombustivel = read.nextInt();
             } else if (tipoCombustivel == 2) {
+                System.out.println("Digite aqui: ");
                 quantidadeClientesGasolina++;
                 tipoCombustivel = read.nextInt();
             } else if (tipoCombustivel == 3) {
+                System.out.println("Digite aqui: ");
                 quantidadeClientesDiesel++;
                 tipoCombustivel = read.nextInt();
             }
