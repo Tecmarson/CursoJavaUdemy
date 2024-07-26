@@ -1,6 +1,6 @@
 package Exercicios.java.curso.modulo8POO.ex03;
 
-public class retangleex01 {
+public class Retangleex01 {
     private double width;
     private double height;
 

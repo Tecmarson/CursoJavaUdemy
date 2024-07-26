@@ -8,7 +8,7 @@ public class ex01 {
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
 
-        retangleex01 retangle = new retangleex01();
+        Retangleex01 retangle = new Retangleex01();
 
         System.out.println("Enter Rectangle Width and Height: ");
         retangle.setWidth(read.nextDouble());
