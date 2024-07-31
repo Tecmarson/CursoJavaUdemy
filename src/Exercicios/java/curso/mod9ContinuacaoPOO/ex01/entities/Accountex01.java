@@ -1,6 +1,6 @@
 package Exercicios.java.curso.mod9ContinuacaoPOO.ex01.entities;
 
-public class Contaex01 {
+public class Accountex01 {
     private String nameHolder;
     private int numberAccount;
     private double balance;
@@ -22,15 +22,14 @@ public class Contaex01 {
         return this.balance;
     }
 
-    public Contaex01(){}
+    public Accountex01(){}
 
-    public Contaex01(String name, int numberAccount) {
+    public Accountex01(String name, int numberAccount) {
         this.nameHolder = name;
         this.numberAccount = numberAccount;
-        deposit(this.balance);
     }
 
-    public Contaex01(String name, int numberAccount, double initialDeposit) {
+    public Accountex01(String name, int numberAccount, double initialDeposit) {
         this.nameHolder = name;
         this.numberAccount = numberAccount;
         deposit(initialDeposit);

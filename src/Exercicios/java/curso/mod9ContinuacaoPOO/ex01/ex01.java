@@ -1,6 +1,6 @@
 package Exercicios.java.curso.mod9ContinuacaoPOO.ex01;
 
-import Exercicios.java.curso.mod9ContinuacaoPOO.ex01.entities.Contaex01;
+import Exercicios.java.curso.mod9ContinuacaoPOO.ex01.entities.Accountex01;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -9,6 +9,8 @@ public class ex01 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
+
+        Accountex01 account;
 
         System.out.println("Enter account number: ");
         int numberAccount = read.nextInt();
@@ -24,7 +26,7 @@ public class ex01 {
         if (choiceDeposit.contains("y")) {
             System.out.println("Enter initial deposit value: ");
             double initialDeposit = read.nextDouble();
-            Contaex01 account = new Contaex01(accountName, numberAccount, initialDeposit);
+            account = new Accountex01(accountName, numberAccount, initialDeposit);
             System.out.println(account);
 
             System.out.println("Enter a deposit value: ");
@@ -39,7 +41,7 @@ public class ex01 {
             System.out.println("Update data:");
             System.out.println(account);
         } else if (choiceDeposit.contains("n")) {
-            Contaex01 account = new Contaex01(accountName, numberAccount);
+            account = new Accountex01(accountName, numberAccount);
             System.out.println(account);
 
             System.out.println("Enter a deposit value: ");
@@ -57,7 +59,7 @@ public class ex01 {
             System.out.println("Tente novamente e digite y para sim e n para não.");
         }
 
-
+        System.out.println("Volte sempre!");
 
         read.close();
     }
