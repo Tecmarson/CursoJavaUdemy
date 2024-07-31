@@ -1,4 +1,4 @@
-package Exercicios.java.curso.mod9ContinuacaoPOO.ex01;
+package Exercicios.java.curso.mod9ContinuacaoPOO.ex01.entities;
 
 public class Contaex01 {
     private String nameHolder;

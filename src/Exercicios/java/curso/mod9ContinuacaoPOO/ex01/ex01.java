@@ -1,5 +1,7 @@
 package Exercicios.java.curso.mod9ContinuacaoPOO.ex01;
 
+import Exercicios.java.curso.mod9ContinuacaoPOO.ex01.entities.Contaex01;
+
 import java.util.Locale;
 import java.util.Scanner;
 
