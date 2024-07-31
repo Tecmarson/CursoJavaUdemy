@@ -3,11 +3,45 @@ package Exercicios.java.curso.mod8IntroducaoPOO.ex02;
 public class Products {
     String name;
     double price;
-    int quantity;
+    int quantity = 0;
+
+    public Products() {}
+
+    public Products(String name, double price) {
+        this.name = name;
+        this.price = price;
+        this.quantity = 0;
+    }
+
+    public Products(String name, double price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
 
     public double totalValueInStock(){
-        return this.quantity * this.price;
+        return  quantity * price;
     }
 
     public void addProducts(int quantity) {
@@ -22,9 +56,9 @@ public class Products {
     public String toString() {
         StringBuilder outputformated = new StringBuilder();
 
-        outputformated.append("Product Data: " + this.name);
-        outputformated.append(String.format(", $%.2f, ", this.price));
-        outputformated.append( this.quantity + " Units");
+        outputformated.append("Product Data: " + getName());
+        outputformated.append(String.format(", $%.2f, ", getPrice()));
+        outputformated.append(getQuantity() + " Units");
         outputformated.append(", Total: $" + totalValueInStock());
 
         return outputformated.toString();

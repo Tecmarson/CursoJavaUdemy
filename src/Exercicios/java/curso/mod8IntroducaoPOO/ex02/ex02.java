@@ -8,33 +8,28 @@ public class ex02 {
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
 
-        Products product = new Products();
-
         System.out.println("Enter Product Data: ");
         System.out.println("Name: ");
-        product.name = read.nextLine();
+        String name = read.nextLine();
 
         System.out.println("Price: ");
-        product.price = read.nextDouble();
+        double price = read.nextDouble();
 
-        System.out.println("Quantity In Stock: ");
-        product.quantity = read.nextInt();
+        Products product = new Products(name, price);
 
         System.out.println(product);
 
         System.out.println("");
         System.out.println("Enter the number of products to be added in stock: ");
-        int quantity = read.nextInt();
-        product.addProducts(quantity);
+        product.addProducts(read.nextInt());
 
         System.out.println();
         System.out.println("Updated dates: ");
         System.out.println(product);
 
         System.out.println("");
-        System.out.println("Enter the number of products to be added in stock: ");
-        quantity = read.nextInt();
-        product.removeProducts(quantity);
+        System.out.println("Enter the number of products to be remove in stock: ");
+        product.removeProducts(read.nextInt());
 
         System.out.println();
         System.out.println("Updated dates:");
