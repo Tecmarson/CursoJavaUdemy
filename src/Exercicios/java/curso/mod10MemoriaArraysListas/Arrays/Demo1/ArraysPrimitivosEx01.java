@@ -1,4 +1,4 @@
-package Exercicios.java.curso.mod10MemoriaArraysListas.Arrays.Ex01;
+package Exercicios.java.curso.mod10MemoriaArraysListas.Arrays.Demo1;
 
 import java.util.Locale;
 import java.util.Scanner;

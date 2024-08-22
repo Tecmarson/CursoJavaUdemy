@@ -1,4 +1,4 @@
-package Exercicios.java.curso.mod10MemoriaArraysListas.Arrays.Ex02;
+package Exercicios.java.curso.mod10MemoriaArraysListas.Arrays.Demo2.Entities;
 
 public class ArraysProductEx02 {
     private String name;
@@ -27,9 +27,11 @@ public class ArraysProductEx02 {
 
     @Override
     public String toString() {
-        return "ArraysProductEx02{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                '}';
+        StringBuilder outputFormated =  new StringBuilder();
+
+        outputFormated.append(String.format("Name: %s", getName()));
+        outputFormated.append(String.format("Price: %.2f", getPrice()));
+
+        return outputFormated.toString();
     }
 }

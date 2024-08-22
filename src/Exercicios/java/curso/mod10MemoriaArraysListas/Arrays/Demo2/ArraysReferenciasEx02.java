@@ -1,6 +1,6 @@
-package Exercicios.java.curso.mod10MemoriaArraysListas.Arrays.Ex02;
+package Exercicios.java.curso.mod10MemoriaArraysListas.Arrays.Demo2;
 
-import Exercicios.java.curso.mod8IntroducaoPOO.ex02.Products;
+import Exercicios.java.curso.mod10MemoriaArraysListas.Arrays.Demo2.Entities.ArraysProductEx02;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -17,8 +17,8 @@ public class ArraysReferenciasEx02 {
 
         for(int i = 0; i < vector.length; i++) {
             System.out.println("Informe nome e preço do produto: ");
-            String name =read.nextLine();
             read.nextLine();
+            String name = read.nextLine();
             double price = read.nextDouble();
             vector[i] = new ArraysProductEx02(name, price);
         }
