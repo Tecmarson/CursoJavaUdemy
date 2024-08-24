@@ -28,6 +28,8 @@ public class Ex03 {
 
             System.out.println("Digite a altura: ");
             heights[i] = read.nextDouble();
+
+            System.out.println(names[i]+ages[i]+heights[i]); //formatar a saida usando String.format
         }
 
 
@@ -38,7 +40,7 @@ public class Ex03 {
             if (ages[i] < 16) {
                 minorAge++;
             }
-            sumHeight += heights[i];
+            sumHeight += heights[i]; // -> sumHeight = sumHeight + heights[i]
         }
 
         double mediaHeight = sumHeight / quantity;
