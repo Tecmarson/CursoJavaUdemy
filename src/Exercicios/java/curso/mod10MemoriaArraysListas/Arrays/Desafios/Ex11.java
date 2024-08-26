@@ -68,6 +68,7 @@ public class Ex11 {
         System.out.printf("Média das alturas das mulheres: %.2f\n", mediaHeightWomen);
         System.out.println("Quantidade de homens na pesquisa: "+ men);
 
+
         read.close();
     }
 }

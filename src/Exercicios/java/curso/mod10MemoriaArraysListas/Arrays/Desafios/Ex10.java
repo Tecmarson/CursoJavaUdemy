@@ -52,6 +52,7 @@ public class Ex10 {
             System.out.println(approved / quantity);
         } else System.out.println("Não há alunos aprovados!");
 
+
         read.close();
     }
 }
