@@ -45,22 +45,21 @@ public class Ex11 {
         }
 
         int women = 0;
+        int men = 0;
         double heightWomen = 0;
         for (int i = 0; i < genders.length; i++) {
             if (genders[i].contains("F") || genders[i].contains("f")) {
                 heightWomen += heights[i];
                 women++;
             }
-        }
-        
-        double mediaHeightWomen = heightWomen / women;
 
-        int men = 0;
-        for (int i = 0; i < genders.length; i++) {
             if (genders[i].contains("M") || genders[i].contains("m")) {
                 men++;
             }
         }
+        
+        double mediaHeightWomen = heightWomen / women;
+
 
         System.out.println();
         System.out.printf("Menor altura: %.2f\n", lowerHeight);
