@@ -8,28 +8,30 @@ public class Ex06 {
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
 
-        System.out.println("Informe quantos valores cada vetor terá? ");
+        System.out.println("Input values: ");
         int quantity = read.nextInt();
 
-        int[] numbersA = new int[quantity];
-        int[] numbersB = new int[quantity];
-        int[] numbersResultante = new int[quantity];
+        int[] arrayA = new int[quantity];
+        int[] arrayB = new int[quantity];
+        int[] arrayResultant = new int[quantity];
 
-        System.out.println("Informe os números do vetor A: ");
-        for (int i = 0; i < quantity; i++) {
-            numbersA[i] = read.nextInt();
+        System.out.println("Input numbers ot the A: ");
+        for (int i = 0; i < arrayA.length; i++) {
+            arrayA[i] = read.nextInt();
         }
 
-        System.out.println("Informe os números do vetor B: ");
-        for (int i = 0; i < quantity; i++) {
-            numbersB[i] = read.nextInt();
+        System.out.println("Input numbers ot the B: ");
+        for (int i = 0; i < arrayB.length; i++) {
+            arrayB[i] = read.nextInt();
         }
 
-        System.out.println("Vetor resultante: ");
-        for (int i = 0; i < quantity; i++) {
-            numbersResultante[i] = numbersA[i] + numbersB[i];
-            System.out.println(numbersResultante[i]);
+        System.out.println("Array resultant: ");
+        for (int i = 0; i < arrayResultant.length; i++) {
+            arrayResultant[i] = arrayA[i] + arrayB[i];
+            System.out.println(arrayResultant[i]);
         }
+
+
 
         read.close();
     }

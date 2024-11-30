@@ -8,53 +8,59 @@ public class Ex03 {
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
 
-        System.out.print("Quantas pessoas serão cadastradas?: ");
-        System.out.println();
+        System.out.println("How many peoples do you want save in the system?");
         int quantity = read.nextInt();
-
-
+        
         String[] names = new String[quantity];
         int[] ages = new int[quantity];
         double[] heights = new double[quantity];
 
+        int order = 1;
+        for (int i = 0; i < names.length; i++) {
 
-        for (int i = 0; i < quantity; i++) {
-            read.nextLine();
-            System.out.println("Digite o nome: ");
+            System.out.println("Input datas the " + order + "ª people: " );
+
+            read.nextLine(); // Linha para consumir o buffer
+
+            System.out.print("Name: ");
             names[i] = read.nextLine();
 
-            System.out.println("Digite a idade: ");
+            System.out.print("Age: ");
             ages[i] = read.nextInt();
 
-            System.out.println("Digite a altura: ");
+            System.out.print("Height: ");
             heights[i] = read.nextDouble();
 
-            System.out.println(names[i]+ages[i]+heights[i]); //formatar a saida usando String.format
+            order++;
         }
-
 
         int minorAge = 0;
         double sumHeight = 0;
 
-        for (int i = 0; i < quantity; i++) {
+        for (int i = 0; i < ages.length; i++) {
             if (ages[i] < 16) {
                 minorAge++;
             }
-            sumHeight += heights[i]; // -> sumHeight = sumHeight + heights[i]
+            sumHeight += heights[i];
         }
 
-        double mediaHeight = sumHeight / quantity;
-        double percentAge = ((double) minorAge / quantity) * 100;
+        double everage = sumHeight / heights.length;
 
-        System.out.println("Altura média = " + String.format("%.2f", mediaHeight));
-        System.out.println("A porcentagem de pessoas menores de 16 anos é de "+String.format("%.1f", percentAge)+"%");
+        int percentage = (int) (((double) minorAge / ages.length) * 100);
 
-        for (int i = 0; i < quantity; i++) {
+        System.out.print("Everage height: ");
+        System.out.printf("%.2f%n", everage);
+
+        System.out.print("People under 16 years old: ");
+        System.out.println(String.format("%s", percentage) + "%");
+
+        
+        for (int i = 0; i < ages.length; i++) {
             if (ages[i] < 16) {
-                System.out.printf("%s", names[i]);
+                System.out.print(names[i] + " ");
             }
         }
-
+        
         read.close();
     }
 }

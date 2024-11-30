@@ -9,35 +9,34 @@ public class Ex08 {
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
 
-        System.out.println("Quantos elementos você quer armazenar? ");
+        System.out.println("How many number do you want? ");
         int quantity = read.nextInt();
 
         int[] numbers = new int[quantity];
 
         for (int i = 0; i < numbers.length; i++) {
-            System.out.println("Digite um número: ");
+            System.out.println("Input number: ");
             numbers[i] = read.nextInt();
         }
 
-        double sumNumbers = 0;
-        int numEven = 0;
+        int sumNumber = 0;
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] % 2 == 0) {
-                sumNumbers += numbers[i];
-                numEven++;
+                sumNumber += numbers[i];
             }
         }
 
-        double media = sumNumbers / numEven;
+        int average = sumNumber / numbers.length;
 
-        if (numEven == 0) {
-            System.out.println("Não há nenhum número par!");
-        } else {
-            System.out.println("Média dos pares: ");
-            System.out.println(media);
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                System.out.println("Average even numbers: ");
+                System.out.println(String.format("%s" , average));
+            } else {
+                System.out.println("Don´t exit even number!"); //logica errada
+            }
+
+            read.close();
         }
-
-
-        read.close();
     }
 }

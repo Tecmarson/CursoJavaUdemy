@@ -8,21 +8,24 @@ public class Ex01 {
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
 
-        System.out.println("Quando números você quer ler?: ");
-        int quantity = read.nextInt();
+        System.out.println("How many numbers do you want storage? ");
+        int size = read.nextInt();
 
-        int[] numbers = new int[quantity];
+        Integer[] numbers = new Integer[size];
 
         for (int i = 0; i < numbers.length; i++) {
-            System.out.print("Digite um números: ");
+            System.out.println("Input number: ");
             numbers[i] = read.nextInt();
         }
 
-        System.out.println("Números negativos");
-
+        System.out.println("Negative numbers: ");
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] < 0) System.out.println(numbers[i]);
+            if (numbers[i] < 0) {
+                System.out.println(numbers[i]);
+            }
         }
+
+
 
         read.close();
     }

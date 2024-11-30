@@ -8,28 +8,28 @@ public class Ex04 {
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
 
-        System.out.println("Quantos números você quer armazenar?");
-        int quantityNumber = read.nextInt();
+        System.out.println("how many numbers do you want?");
+        int quantity = read.nextInt();
 
-        int[] numbers = new int[quantityNumber];
+        int[] numbers = new int[quantity];
 
-        for (int i = 0; i < quantityNumber; i++) {
-            System.out.println("Digite um número inteiro: ");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("Input number: ");
             numbers[i] = read.nextInt();
         }
 
-        System.out.println("Números pares:");
-
+        System.out.println("Even numbers: ");
         int numberEven = 0;
-        for (int i = 0; i < quantityNumber; i++) {
-            if (numbers[i] % 2 == 0 ) {
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                System.out.print(String.format("%s ", numbers[i]));
+                System.out.println();
                 numberEven++;
-                System.out.print(numbers[i] + " ");
             }
         }
 
-        System.out.println();
-        System.out.println("Quantidade de número pares: " + numberEven);
+        System.out.println(numberEven);
+
 
         read.close();
     }

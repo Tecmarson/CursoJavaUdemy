@@ -8,38 +8,34 @@ public class Ex02 {
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
 
-        System.out.println("Quanto números você quer ler?: ");
-        int quantity = read.nextInt();
+        System.out.println("How many numbers do you want storage?");
+        int size = read.nextInt();
 
-        double[] numbers = new double[quantity];
+        Double[] realNumbers = new Double[size];
 
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.print("Digite um número: ");
-            numbers[i] = read.nextInt();
+        for (int i = 0; i < realNumbers.length; i++) {
+            System.out.println("Input number: ");
+            realNumbers[i] = read.nextDouble();
         }
 
-        System.out.print("Valores = ");
-        for (int i = 0; i <numbers.length ; i++) {
-            System.out.print(" " + numbers[i] + " ");
-        }
-
-
-        System.out.println();
-        System.out.print("Soma = ");
         double sum = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            sum += numbers[i];
+        for (int i = 0; i < realNumbers.length; i++) {
+            sum += realNumbers[i];
         }
-        System.out.print(sum);
 
+        double split = sum / realNumbers.length;
+
+        System.out.print("Values: ");
+        for (int i = 0; i < realNumbers.length; i++) {
+            System.out.print(realNumbers[i]+ " ");
+        }
 
         System.out.println();
-        System.out.print("Média = ");
-        double media = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            media += numbers[i] / numbers.length;
-        }
-        System.out.println(media);
+        System.out.print("Sum: ");
+        System.out.println(sum);
+
+        System.out.print("Media: ");
+        System.out.println(split);
 
         read.close();
     }
