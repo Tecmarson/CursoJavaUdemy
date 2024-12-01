@@ -2,6 +2,7 @@ package Exercicios.java.curso.mod12EnumsEComposicao.Demo.entities;
 
 import Exercicios.java.curso.mod12EnumsEComposicao.Demo.entitiesEnums.WorkeLevel;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -68,17 +69,30 @@ public class Worker {
         contracts.remove(contract);
    }
 
-   public Double income(Integer year, Integer mounth) {
+   // SOLUÇÃO USANDO CALENDAR PRE JAVA 8
+   /*public Double income(Integer year, Integer mounth) {
         double sum = baseSalary;
        Calendar calendar = Calendar.getInstance();
         for (HourContract contract : contracts) {
-            calendar.setTime(contract.getDate());
-            int calendar_year = calendar.get(calendar.YEAR);
-            int calendar_mounth = 1 + calendar.get(calendar.MONTH);
-            if (year == calendar_year && mounth == calendar_mounth) {
+            calendar.setTime(contract.getDate1());
+            int calendarYear = calendar.get(calendar.YEAR);
+            int calendarMounth = 1 + calendar.get(calendar.MONTH);
+            if (year == calendarYear && mounth == calendarMounth) {
                 sum += contract.totalValue();
             }
         }
         return sum;
-   }
+   }*/
+
+   // SOLUÇÃO USANDO LOCALDATE JAVA 8
+    public Double income(Integer year, Integer mounth, int v) {
+        double sum = baseSalary;
+        for (HourContract contract : contracts) {
+            LocalDate contractDate =  contract.getDate();
+            if (year.equals(contractDate.getYear()) && mounth.equals(contractDate.getMonth())) {
+                sum += contract.totalValue();
+            }
+        }
+        return sum;
+    }
 }
