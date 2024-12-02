@@ -71,7 +71,7 @@ public class Worker {
 
    // SOLUÇÃO USANDO CALENDAR PRE JAVA 8
    /*public Double income(Integer year, Integer mounth) {
-        double sum = baseSalary;
+       double sum = baseSalary;
        Calendar calendar = Calendar.getInstance();
         for (HourContract contract : contracts) {
             calendar.setTime(contract.getDate1());
@@ -85,11 +85,11 @@ public class Worker {
    }*/
 
    // SOLUÇÃO USANDO LOCALDATE JAVA 8
-    public Double income(Integer year, Integer mounth, int v) {
+    public Double income(Integer year, Integer month) {
         double sum = baseSalary;
         for (HourContract contract : contracts) {
             LocalDate contractDate =  contract.getDate();
-            if (year.equals(contractDate.getYear()) && mounth.equals(contractDate.getMonth())) {
+            if (year.equals(contractDate.getYear()) && month.equals(contractDate.getMonthValue())) {
                 sum += contract.totalValue();
             }
         }

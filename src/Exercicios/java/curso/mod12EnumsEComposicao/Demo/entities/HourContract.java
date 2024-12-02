@@ -1,12 +1,10 @@
 package Exercicios.java.curso.mod12EnumsEComposicao.Demo.entities;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class HourContract {
 
     private LocalDate date;
-    /*rivate Date date1;*/
     private Double valuePerHour;
     private Integer hours;
 
@@ -21,10 +19,6 @@ public class HourContract {
     public LocalDate getDate() {
         return date;
     }
-
-    /*public Date getDate1() {
-        return date1;
-    }*/
 
     public void setDate(LocalDate date) {
         this.date = date;
