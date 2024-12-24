@@ -8,6 +8,7 @@ public class App {
         Locale.setDefault(Locale.US);
         Scanner read = new Scanner(System.in);
 
+        System.out.println("Enter name of department: ");
 
 
         read.close();
